@@ -2,6 +2,7 @@ import { useState } from "react";
 import Searchbar from "../components/Searchbar";
 import Recipe from "../components/Recipe";
 import "../components/style.css";
+
 function Home() {
   const [recipe, setRecipe] = useState([
     {

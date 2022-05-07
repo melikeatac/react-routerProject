@@ -53,6 +53,45 @@
 .nav-menum {
   display: none;
 }
+.searcdiv {
+  margin-top: 20px;
+}
+.searchtext {
+  padding: 12px;
+  width: 80%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.customstyle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  padding: 50px;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  background-color: #3e6b6b;
+}
+.buttonModal {
+  color: #ffffff !important;
+  background: #879c9c;
+  padding: 8px 40px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+.modalP {
+  color: #ffffff;
+  text-align: center;
+  margin: 20px 0px;
+}
 @media screen and (max-width: 960px) {
   .containerFluid {
     padding: 20px 65px;

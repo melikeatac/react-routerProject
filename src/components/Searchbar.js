@@ -1,19 +1,8 @@
 import React from "react";
-
+import "../components/style.css"
 function Searchbar({ search, setSearch }) {
-  const styles = {
-    searcdiv: {
-      marginTop: "20px",
-    },
-    text: {
-      padding: "12px",
-      width: "80%",
-      border: "1px solid gray",
-      borderRadius: "5px",
-    },
-  };
   return (
-    <div style={styles.searcdiv}>
+    <div className="searchdiv">
       <input
         onChange={(e) => {
           setSearch(e.target.value);
@@ -21,7 +10,7 @@ function Searchbar({ search, setSearch }) {
         }}
         type="text"
         placeholder="Find a Recipe"
-        style={styles.text}
+        className="searchtext"
       ></input>
     </div>
   );
