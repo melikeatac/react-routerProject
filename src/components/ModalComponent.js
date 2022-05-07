@@ -6,6 +6,7 @@ function ModalComponent({ modalIsOpen, setIsOpen, recipes }) {
     <>
       {recipes.map((recipe) => (
         <Modal key={recipe.id} className="customstyle" isOpen={!!modalIsOpen}>
+          <span className="modalSpan" onClick={()=>setIsOpen(false)}>X</span>
           <h2
             style={{
               color: "#ffffff",
