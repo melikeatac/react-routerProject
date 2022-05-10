@@ -1,13 +1,13 @@
-import { useState } from "react";
 import ModalComponent from "./ModalComponent";
 import Modal from "react-modal";
 
 function Recipe({ recipes, setRecipes, search }) {
+  Modal.setAppElement("body");
+
   let filteredFunctions = recipes.filter(
     (recipe) => recipe.name.toLowerCase().indexOf(search.toLowerCase()) !== -1
   );
-  Modal.setAppElement("body");
-  const [modalIsOpen, setIsOpen] = useState(false);
+
   return (
     <div className="row" style={{ marginTop: "50px" }}>
       {filteredFunctions.map((recipe) => (
@@ -24,18 +24,7 @@ function Recipe({ recipes, setRecipes, search }) {
                   width: "100%",
                 }}
               >
-                <a
-                  className="btn btn-primary"
-                  onClick={() => setIsOpen(true)}
-                  style={{ color: "#ffffff" }}
-                >
-                  DETAIL
-                </a>
-                <ModalComponent
-                  modalIsOpen={modalIsOpen}
-                  setIsOpen={setIsOpen}
-                  recipes={recipes}
-                ></ModalComponent>
+                <ModalComponent recipes={recipes}></ModalComponent>
                 <a
                   onClick={() =>
                     setRecipes(() =>

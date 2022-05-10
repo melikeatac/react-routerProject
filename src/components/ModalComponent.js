@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import "../components/style.css";
-function ModalComponent({ modalIsOpen, setIsOpen, recipes }) {
+function ModalComponent({ recipes }) {
+  const [open, setOpen] = useState(false);
   return (
     <>
+      <a
+        className="btn btn-primary"
+        onClick={() => setOpen(true)}
+        style={{ color: "#ffffff" }}
+      >
+        DETAIL
+      </a>
       {recipes.map((recipe) => (
-        <Modal key={recipe.id} className="customstyle" isOpen={!!modalIsOpen}>
-          <span className="modalSpan" onClick={()=>setIsOpen(false)}>X</span>
+        <Modal key={recipe.id} className="customstyle" isOpen={open}>
+          {/* {console.log("OPEEEN", open)} */}
+
+          <span className="modalSpan" onClick={() => setOpen(false)}>
+            X
+          </span>
           <h2
             style={{
               color: "#ffffff",
@@ -17,7 +29,7 @@ function ModalComponent({ modalIsOpen, setIsOpen, recipes }) {
           <p className="modalP">{recipe.description}</p>
           <img src={recipe.imageURL} />
           <br />
-          <button className="buttonModal" onClick={() => setIsOpen(false)}>
+          <button className="buttonModal" onClick={() => setOpen(false)}>
             CLOSE
           </button>
         </Modal>
