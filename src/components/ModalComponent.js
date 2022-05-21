@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "../components/style.css";
-function ModalComponent({ recipes }) {
+function ModalComponent({ recipe }) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -12,7 +12,6 @@ function ModalComponent({ recipes }) {
       >
         DETAIL
       </a>
-      {recipes.map((recipe) => (
         <Modal key={recipe.id} className="customstyle" isOpen={open}>
           {/* {console.log("OPEEEN", open)} */}
 
@@ -33,7 +32,6 @@ function ModalComponent({ recipes }) {
             CLOSE
           </button>
         </Modal>
-      ))}
     </>
   );
 }

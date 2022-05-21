@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Searchbar from "../components/Searchbar";
 import Recipe from "../components/Recipe";
 import "../components/style.css";
+import Footer from "../components/Footer";
 
 function Home() {
   const [recipe, setRecipe] = useState([
@@ -81,15 +82,20 @@ function Home() {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="containerFluid">
-      <h1 style={{ color: "#008080", margin: "40px 0px", textAlign: "center" }}>
-        Community Picks
-      </h1>
-      <div style={{ textAlign: "center" }}>
-        <Searchbar search={search} setSearch={setSearch} />
+    <Fragment>
+      <div className="containerFluid">
+        <h1
+          style={{ color: "#008080", margin: "40px 0px", textAlign: "center" }}
+        >
+          Community Picks
+        </h1>
+        <div style={{ textAlign: "center" }}>
+          <Searchbar search={search} setSearch={setSearch} />
+        </div>
+        <Recipe recipes={recipe} setRecipes={setRecipe} search={search} />
       </div>
-      <Recipe recipes={recipe} setRecipes={setRecipe} search={search} />
-    </div>
+      <Footer />
+    </Fragment>
   );
 }
 

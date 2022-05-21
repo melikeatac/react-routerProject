@@ -24,7 +24,7 @@ function Recipe({ recipes, setRecipes, search }) {
                   width: "100%",
                 }}
               >
-                <ModalComponent recipes={recipes}></ModalComponent>
+                <ModalComponent recipe={recipe}></ModalComponent>
                 <a
                   onClick={() =>
                     setRecipes(() =>

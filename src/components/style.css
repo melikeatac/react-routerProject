@@ -107,9 +107,85 @@
 .gloh2 {
   margin: 20px 0px 30px 0px;
 }
-.glop{
+.glop {
   margin-bottom: 60px;
   font-size: 18px;
+}
+
+.cs-footer {
+  width: 100%;
+  height: auto;
+  background-color: #3e6b6b;
+  border-top: 1px solid gray;
+  padding: 20px 100px;
+}
+.cs-footer img {
+  width: 100px;
+}
+.cs-footer h6 {
+  color: #ffffff;
+  margin: 10px 0px;
+}
+.cs-footer input {
+  width: 180px;
+  padding: 3px 5px;
+  border: none;
+  margin-right: 2px;
+  font-size: 15px;
+}
+.cs-left1 p {
+  color: #ffffff;
+}
+.cs-footer-left p {
+  margin: 10px 0px;
+  color: #ffffff;
+}
+.cs-footer button {
+  border: none;
+  padding: 2px 10px;
+  font-size: 16px;
+  color: #242323;
+}
+.cs-footer button:hover {
+  color: #aaaaaa;
+  background-color: #242323;
+  transition: all 0.3s;
+}
+.cs-footer-middle ul {
+  list-style: none;
+  margin: 0px;
+}
+.cs-footer-middle li {
+  padding: 10px 0px;
+}
+.cs-footer-middle li a {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.cs-footer-right h5 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.cs-footer-right ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.cs-footer-right li {
+  margin-left: 30px;
+}
+.cs-footer-right li a {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+}
+.cs-footer-right p {
+  color: #ffffff;
+  font-size: 17px;
+  margin-top: 20px;
+
 }
 @media screen and (max-width: 960px) {
   .containerFluid {
